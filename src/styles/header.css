@@ -1,0 +1,20 @@
+.header {
+    padding: 0px;
+    height: 25%;
+    width: 100%;
+    background: rgb(24, 24, 24);
+    display: flex;
+}
+
+.header-inner {
+    margin: auto;
+    color: rgb(231, 211, 27);
+    font-size: 48pt;
+    letter-spacing: 15px;
+
+    /* запрет выделения */
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,11 @@
+.item {
+    box-sizing: border-box;
+    padding: 10px;
+
+    background-color: rgb(68, 68, 68);
+}
+
+.item-img {
+    height: 100%;
+    width: 100%;
+}
