@@ -1,0 +1,21 @@
+.test-redux {
+    font-size: 24pt;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test-redux-btns {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(61, 61, 61);
+    color: rgb(231, 211, 27);
+    border: 1px solid rgb(231, 211, 27);
+    border-radius: 10%;
+    font-size: 14pt
+}
+
+.test-redux-btns:hover {
+    background-color: rgb(231, 211, 27);
+    color: rgb(61, 61, 61); 
+}

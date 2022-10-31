@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/content.css';
-import Item from './Item.jsx';
+import Item from '../components/Item.jsx';
 
 const Content = () => {
     return (
@@ -68,7 +68,5 @@ const Content = () => {
         </div>
     )
 }
-
-/*  */
 
 export default Content;
