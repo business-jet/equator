@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Content from './pages/Content';
 import About from './pages/About'
 import TestRedux from './pages/TestRedux';
+import TestBackend from './pages/TestBackend';
 
 import './styles/index.css';
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Content/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/test-redux' element={<TestRedux/>} />
+        <Route path='/test-backend' element={<TestBackend/>} />
       </Routes>
     </BrowserRouter>
   );
