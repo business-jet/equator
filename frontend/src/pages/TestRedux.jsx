@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { actionDec, actionInc } from "../store/testReducer";
 
 import '../styles/test-redux.css'
 
@@ -8,11 +9,11 @@ const TestRedux = () => {
     const value = useSelector( state => state.test.value )
     
     const incValue = () => {
-        dispatch({type: "INC_ACTION", payload: 5})
+        dispatch(actionInc(5))
     }
 
     const decValue = () => {
-        dispatch({type: "DEC_ACTION", payload: 5})
+        dispatch(actionDec(5))
     }
 
     return (

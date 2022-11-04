@@ -1,9 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { fetchTopPics } from "../actions/getTopPics";
+import { actionClearState } from "../store/testBackend";
 import '../styles/test-redux.css'
-
-import { fetchTopPics } from "../action/getTopPics";
 
 const TestBackend = () => {
     const dispatch = useDispatch()
@@ -14,7 +13,7 @@ const TestBackend = () => {
             <h1>Test Backend</h1>
             <div>
                 <button className="test-redux-btns" onClick={() => dispatch(fetchTopPics())}>Получить картинки от сервера</button>
-                <button className="test-redux-btns" onClick={() => dispatch({type: 'CLEAR_STATE'})}>Очистить состояние</button>
+                <button className="test-redux-btns" onClick={() => dispatch(actionClearState())}>Очистить состояние</button>
             </div>
             {top_pics && top_pics.length > 0 ?
                 <div>
