@@ -1,4 +1,4 @@
-import { actionGetTopPics } from "../store/testBackend"
+import { actionGetTopPics } from "../store/contentReducer"
 
 export const fetchTopPics = () => {
     return function(dispatch) {

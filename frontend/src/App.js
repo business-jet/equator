@@ -1,24 +1,25 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 import Header from './components/Header'
-import Content from './pages/Content';
-import About from './pages/About'
-import TestRedux from './pages/TestRedux';
-import TestBackend from './pages/TestBackend';
+import Router from './components/Router';
+
+import { fetchTopPics } from './actions/getTopPics';
 
 import './styles/index.css';
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchTopPics())
+  }, [dispatch])
+
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path='/' element={<Content/>} />
-        <Route path='/about' element={<About/>} />
-        <Route path='/test-redux' element={<TestRedux/>} />
-        <Route path='/test-backend' element={<TestBackend/>} />
-      </Routes>
+      <Router />
     </BrowserRouter>
   );
 }
