@@ -1,5 +1,5 @@
 from os import walk
-from .schemas import Pic
+from schemas import Pic
 
 
 def getTopPics() -> list:

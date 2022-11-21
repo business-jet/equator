@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Router from './components/Router';
 
 import { fetchTopPics } from './actions/getTopPics';
+import { fetchArticles } from './actions/getArticles';
 
 import './styles/index.css';
 
@@ -14,6 +15,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchTopPics())
+    dispatch(fetchArticles())
   }, [dispatch])
 
   return (
