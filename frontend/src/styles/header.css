@@ -1,44 +1,67 @@
 .header {
+    margin-bottom: 20px;
     padding: 0px;
-    height: 25%;
+    height: 75%;
     width: 100%;
-    background: rgb(24, 24, 24);
     display: flex;
     flex-direction: column;
-}
 
-.header-inner {
-    margin: auto;
-    color: rgb(231, 211, 27);
-    font-size: 48pt;
-    letter-spacing: 15px;
-
-    /* запрет выделения */
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
+    /* background: rgb(34, 34, 34); */
+    background: url('https://sun9-20.userapi.com/impg/7L8A7agYJ7tFghAmOKuZdlfwkb4uFyBp0Qot-Q/ibhhpmm9XHc.jpg?size=1620x1080&quality=95&sign=949fbf14ce3736cd8f2bea2c071c7ac5&type=album');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .links {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .link {
-    padding: 10px;
-    margin: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
     height: fit-content;
     width: fit-content;
-    font-size: 18pt;
-    border: 1px solid rgb(231, 211, 27);
-    border-radius: 10%;
-    color:rgb(231, 211, 27);
-    text-decoration: none;
-    letter-spacing: 2px;
+
+    font-family: 'Inter';
+    font-style: normal;
 }
 
-.link:hover {
-    background-color: rgb(231, 211, 27);
-    color: rgb(24, 24, 24);
+.secondary {
+    font-size: 24pt;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    /* border: 1px solid white; */
+    border-radius: 140px;
+    color:white;
+    background: rgba(114, 114, 114, 0.7);
+
+}
+
+.secondary:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.main {
+    font-size: 64pt;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 5pt;
+
+    color: white;
+    border: none;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.main:hover {
+    transform: scale(1.05);
 }

@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import '../styles/article.css';
 
-const SERVER_URL = 'http://0.0.0.0:8000/'
-
 const Article = (props) => {
     const defaultStyle = 'article-img'
     const enterStyle = 'article-img article-img--enter'
@@ -23,7 +21,7 @@ const Article = (props) => {
         <div className='article-container'>
             <div style={{position: 'relative'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <img className={imgStyle}
-                    src={SERVER_URL + props.info.picture_url}
+                    src={props.info.picture_urls[0]} // src={SERVER_URL + props.info.picture_url}
                     alt=''
                 />
                 <div className='article-container--info'>

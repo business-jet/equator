@@ -2,19 +2,17 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import '../styles/header.css';
+import '../styles/index.css'
 
 const Header = (props) => {
     return (
-        <div className='header'>
-            <div className='header-inner'>
-                E Q U A T O R
-            </div>
-            <hr style={{width: '95%', borderColor: 'rgb(231, 211, 27)'}} />
+        <div className='header unselectable'>
             <div className='links'>
-                <Link to="/" className='link'>Главная</Link>
-                <Link to="/articles" className='link'>Статьи</Link>
-                <Link to="/about" className='link'>О нас</Link>
-                <Link to="/test-redux" className='link'>Test Redux</Link>
+                <Link to="/" className='link main'>EQUATOR</Link>
+                <Link to="/gallery" className='link secondary'>Галерея</Link>
+                <Link to="/articles" className='link secondary'>Статьи</Link>
+                <Link to="/airtickets" className='link secondary'>Авиабилеты</Link>
+                <Link to="/tours" className='link secondary'>Туры</Link>
             </div>
         </div>
     )
