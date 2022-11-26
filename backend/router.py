@@ -21,12 +21,7 @@ def get_db():
         _db.close()
 
 
-@router.get('/')
-async def root():
-    return {'message': 'Hello, world!'}
-
-
-@router.get('/top_pics', response_model=schemas.TopPics)
+@router.get('/top-pics', response_model=schemas.TopPics)
 async def top_pics():
     top_pics = common.getTopPics()
     return schemas.TopPics(top_pics=top_pics)
@@ -37,8 +32,11 @@ async def articles(db: Session = Depends(get_db)):
     return await services.get_articles(db=db)
 
 
-@router.post('/add_article', response_model=schemas.Article)
+@router.get('/articles/{id}')
+async def article(id: int, db: Session = Depends(get_db)):
+    return await services.get_article_by_id(id=id, db=db)
+
+
+@router.post('/create-article', response_model=schemas.Article)
 async def add_article(article: schemas.Article, db: Session = Depends(get_db)):
     return await services.add_article(article=article, db=db)
-
-

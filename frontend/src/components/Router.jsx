@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import AirTickets from '../pages/Airtickets';
 import Articles from '../pages/Articles';
+import ArticleOne from '../pages/ArticleOne';
 import Gallery from '../pages/Gallery';
 import Home from '../pages/Home';
 import Tours from '../pages/Tours';
@@ -14,7 +15,8 @@ const Router = () => {
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/gallery' element={<Gallery/>} />
-            <Route path='/articles' element={<Articles/>} />
+            <Route exact path='/articles' element={<Articles/>} />
+            <Route exact path='/articles/:id' element={<ArticleOne />} />
             <Route path='/airtickets' element={<AirTickets/>} />
             <Route path='/tours' element={<Tours/>} />
         </Routes>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from "react-redux";
-import '../styles/article.css';
-import Article from '../components/Article';
+import '../styles/article-element.css';
+import ArticleElement from '../components/ArticleElement';
 
 
 const Articles = () => {
@@ -11,7 +11,7 @@ const Articles = () => {
         <div className='articles'>
             { articles.map(article => 
                 <div className='articles-column' key={article.id}>
-                    <Article info={article} />
+                    <ArticleElement info={article} />
                 </div>
             ) }
         </div>

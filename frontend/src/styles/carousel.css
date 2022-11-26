@@ -1,0 +1,14 @@
+.slider-container {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.slider-container p {
+    font-size: 20pt;
+    margin: 0;
+}
+
+.slider-element {
+    
+}

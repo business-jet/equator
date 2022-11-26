@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import '../styles/article.css';
+import { useNavigate } from 'react-router-dom';
+import '../styles/article-element.css';
 
-const Article = (props) => {
+const ArticleElement = (props) => {
+    const navigate = useNavigate()
     const defaultStyle = 'article-img'
     const enterStyle = 'article-img article-img--enter'
     const [isEnter, setIsEnter] = useState(false)
@@ -19,7 +21,11 @@ const Article = (props) => {
 
     return (
         <div className='article-container'>
-            <div style={{position: 'relative'}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div style={{position: 'relative'}}
+                 onMouseEnter={handleMouseEnter}
+                 onMouseLeave={handleMouseLeave}
+                 onClick={() => navigate('/articles/' + props.info.id) }
+            >
                 <img className={imgStyle}
                     src={props.info.picture_urls[0]} // src={SERVER_URL + props.info.picture_url}
                     alt=''
@@ -37,4 +43,4 @@ const Article = (props) => {
     )
 }
 
-export default Article;
+export default ArticleElement;
