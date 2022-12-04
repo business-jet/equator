@@ -1,20 +1,25 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
-import PostService from "../API/PostService";
+import PostService from "../api/PostService";
+import { updateArticleByID } from "../store/articlesSlice";
 import '../styles/article.css';
 
 const ArticleOne = () => {
+    const dispatch = useDispatch()
     const param_id = useParams().id
-    const [article, setArticle] = useState()
+    const article = useSelector( state => state.articles.articleByID )
 
     useEffect(() => {
-        async function fetchData() {
-            const request = await PostService.getArticle(param_id)
-            setArticle(request)
+        const loadArticleByID = () => {
+            return async dispatch => {
+                const _article = await PostService.getArticle(param_id)
+                return dispatch(updateArticleByID(_article))
+            }
         }
-        fetchData()
-    }, [])
+
+        dispatch(loadArticleByID())
+    }, [dispatch, param_id])
 
     function parseDate(_date) {
         const date = new Date(_date)
@@ -25,7 +30,7 @@ const ArticleOne = () => {
 
     return (
         <div>
-            {article === undefined
+            {article === null
                 ?
                 <div className="article-loading">
                     Загрузка...
