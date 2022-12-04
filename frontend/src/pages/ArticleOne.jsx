@@ -33,8 +33,7 @@ const ArticleOne = () => {
                 :
                 <div className="article">
                     <h1>{article.title}</h1>
-                    {article.picture_urls.length > 0
-                        && <img src={article.picture_urls[0]} alt=''/>}
+                    <img src={article.picture_url} alt=''/>
                     <div>{article.text}</div>
                     <p>Опубликовано: {parseDate(article.date)}</p>
                 </div>

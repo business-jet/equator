@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const SERVER_URL = 'http://localhost:8000/'
+const SERVER_URL = 'http://localhost:8000/api/'
 
 export default class PostService {
     static async getArticle(id) {

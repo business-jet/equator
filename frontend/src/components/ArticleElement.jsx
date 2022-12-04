@@ -27,7 +27,7 @@ const ArticleElement = (props) => {
                  onClick={() => navigate('/articles/' + props.info.id) }
             >
                 <img className={imgStyle}
-                    src={props.info.picture_urls[0]} // src={SERVER_URL + props.info.picture_url}
+                    src={props.info.picture_url} // src={SERVER_URL + props.info.picture_url}
                     alt=''
                 />
                 <div className='article-container--info'>
