@@ -1,11 +1,10 @@
 import axios from 'axios';
-
-const SERVER_URL = 'http://localhost:8000/api/'
+import { apiPath } from '../helpers/urlHelper';
 
 export default class PostService {
     static async getArticles() {
         try {
-            const response = await axios.get(SERVER_URL + 'articles')
+            const response = await axios.get(apiPath('articles'))
             return response.data
         }
         catch (e) {
@@ -16,7 +15,7 @@ export default class PostService {
 
     static async getArticle(id) {
         try {
-            const response = await axios.get(SERVER_URL + 'articles/' + id)
+            const response = await axios.get(apiPath('articles/' + id))
             return response.data
         }
         catch (e) {
