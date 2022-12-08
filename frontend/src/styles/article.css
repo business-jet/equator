@@ -1,38 +1,38 @@
+.article {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .article-loading {
     font-size: 20pt;
     text-align: center;
 }
 
 .article h1 {
-    font-size: 24pt;
-    text-decoration: underline;
     text-align: center;
-    margin: 10px;
 }
 
-.article div {
+.article-content {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10%;
-    padding-right: 10%;
     font-size: 18pt;
 }
 
 .article img {
     display: block;
-    width: 80%;
-    object-fit: cover;
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
     margin: auto;
 }
 
-.article p {
+.article-published {
     display: block;
-    width: 80%;
+    width: 100%;
     margin: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 10%;
-    padding-right: 10%;
 
     text-align: right;
     font-size: 18pt;

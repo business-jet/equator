@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import PostService from "../api/PostService";
 import { updateArticleByID } from "../store/articlesSlice";
+import MarkdownView from 'react-showdown';
 import '../styles/article.css';
 
 const ArticleOne = () => {
@@ -18,8 +19,9 @@ const ArticleOne = () => {
             }
         }
 
-        dispatch(loadArticleByID())
-    }, [dispatch, param_id])
+        if ( article == null || param_id !== article.id )
+            dispatch(loadArticleByID())
+    }, [dispatch, param_id, article])
 
     function parseDate(_date) {
         const date = new Date(_date)
@@ -29,18 +31,20 @@ const ArticleOne = () => {
     }
 
     return (
-        <div>
+        <div className="article">
             {article === null
                 ?
                 <div className="article-loading">
                     Загрузка...
                 </div>
                 :
-                <div className="article">
-                    <h1>{article.title}</h1>
-                    <img src={article.picture_url} alt=''/>
-                    <div>{article.text}</div>
-                    <p>Опубликовано: {parseDate(article.date)}</p>
+                <div className="article-content">
+                    <h1 className="article-title">{article.title}</h1>
+                    { article.picture_url.trim() !== '' && 
+                        <img src={article.picture_url} alt='' className="article-main-img"/>
+                    }
+                    <MarkdownView markdown={article.text} options={{}} />
+                    <div className="article-published">Опубликовано: {parseDate(article.date)}</div>
                 </div>
             }
         </div>

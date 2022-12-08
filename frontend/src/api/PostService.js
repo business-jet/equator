@@ -4,7 +4,7 @@ import { apiPath } from '../helpers/urlHelper';
 export default class PostService {
     static async getArticles() {
         try {
-            const response = await axios.get(apiPath('articles'))
+            const response = await axios.get(apiPath('articles/'))
             return response.data
         }
         catch (e) {
