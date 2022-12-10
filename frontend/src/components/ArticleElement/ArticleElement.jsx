@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/article-element.css';
+import styles from './ArticleElement.module.css';
 
 const ArticleElement = (props) => {
     const navigate = useNavigate()
-    const defaultStyle = 'article-img'
-    const enterStyle = 'article-img article-img--enter'
+    const defaultStyle = styles.articleImg
+    const enterStyle = styles.articleImg__enter
     const [isEnter, setIsEnter] = useState(false)
     const [imgStyle, setImgStyle] = useState(defaultStyle)
 
@@ -20,17 +20,17 @@ const ArticleElement = (props) => {
     }
 
     return (
-        <div className='article-container'>
+        <div className={styles.articleContainer}>
             <div style={{position: 'relative'}}
                  onMouseEnter={handleMouseEnter}
                  onMouseLeave={handleMouseLeave}
                  onClick={() => navigate('/articles/' + props.info.id) }
             >
                 <img className={imgStyle}
-                    src={props.info.picture_url} // src={SERVER_URL + props.info.picture_url}
+                    src={props.info.picture_url}
                     alt=''
                 />
-                <div className='article-container--info'>
+                <div className={styles.articleContainer__info}>
                     {props.info.title}
                 </div>
                 {/* { isEnter &&

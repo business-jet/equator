@@ -1,0 +1,15 @@
+.articles {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.articles:after {
+    content: '';
+    /* display: table; */
+    clear: both;
+}
+
+.articlesColumn {
+    float: left;
+    width: 33.3%;
+}

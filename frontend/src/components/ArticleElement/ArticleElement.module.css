@@ -9,12 +9,12 @@
     clear: both;
 }
 
-.articles-column {
+.articlesColumn {
     float: left;
     width: 33.3%;
 }
 
-.article-container {
+.articleContainer {
     box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
@@ -22,18 +22,19 @@
     margin-bottom: 20px;
 }
 
-.article-img {
+.articleImg {
     display: block;
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
-.article-img--enter {
-    filter: brightness(40%)
+.articleImg__enter {
+    composes: articleImg;
+    filter: brightness(40%);
 }
 
-.article-container--info {
+.articleContainer__info {
     position: absolute;
     width: 100%;
     bottom: 0px;

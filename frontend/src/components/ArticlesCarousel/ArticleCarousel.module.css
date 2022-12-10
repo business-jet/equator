@@ -1,10 +1,10 @@
-.slider-container {
+.sliderContainer {
     display: block;
     width: 100%;
     margin: 0;
 }
 
-.slider-container p {
+.sliderContainer p {
     font-size: 20pt;
     margin: 0;
 }

@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import Router from './components/Router';
 
 import { updateAll } from './store/articlesSlice';
 
 import PostService from './api/PostService';
 
-import './styles/index.css';
+import './index.css';
 
 function App() {
   const dispatch = useDispatch()

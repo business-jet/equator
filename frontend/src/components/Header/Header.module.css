@@ -1,42 +1,50 @@
 .header {
+    composes: unselectable from '../../index.css';
+
     margin-bottom: 20px;
     padding: 0px;
     height: 75%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
 
     /* background: rgb(34, 34, 34); */
     background: url('https://sun9-20.userapi.com/impg/7L8A7agYJ7tFghAmOKuZdlfwkb4uFyBp0Qot-Q/ibhhpmm9XHc.jpg?size=1620x1080&quality=95&sign=949fbf14ce3736cd8f2bea2c071c7ac5&type=album');
     background-repeat: no-repeat;
     background-size: cover;
 }
+@media (max-width:1200px) {
+    .header {
+        overflow: scroll;
+    }
+}
 
 .links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+
+    
+}
+@media (max-width:1200px) {
+    .links {
+        flex-direction: column;
+    }
 }
 
 .link {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-
-    height: fit-content;
-    width: fit-content;
-
+    padding: 10px 30px 10px 30px;
+    
     font-family: 'Inter';
     font-style: normal;
-}
-
-.secondary {
-    font-size: 24pt;
     font-weight: 700;
     text-decoration: none;
+}
+
+.secondaryLink {
+    composes: link;
+    
+    margin: 0px 20px 0px 0px;
+
+    font-size: 20pt;
     letter-spacing: 2px;
 
     /* border: 1px solid white; */
@@ -45,15 +53,20 @@
     background: rgba(114, 114, 114, 0.7);
 
 }
+@media (max-width:1200px) {
+    .secondaryLink {
+        margin: 5px 0;
+    }
+}
 
-.secondary:hover {
+.secondaryLink:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.main {
-    font-size: 64pt;
-    font-weight: 700;
-    text-decoration: none;
+.mainLink {
+    composes: link;
+
+    font-size: 40pt;
     letter-spacing: 5pt;
 
     color: white;
@@ -62,6 +75,6 @@
     transition: all 0.5s ease-in-out;
 }
 
-.main:hover {
+.mainLink:hover {
     transform: scale(1.05);
 }

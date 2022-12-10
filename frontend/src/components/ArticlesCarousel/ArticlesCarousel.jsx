@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from 'react-slick';
-import ArticleElement from './ArticleElement';
+import ArticleElement from '../ArticleElement/ArticleElement';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../styles/carousel.css'
+import styles from './ArticleCarousel.module.css';
 
 const ArticleCarousel = (props) => {
     var settings = {
@@ -19,7 +19,7 @@ const ArticleCarousel = (props) => {
       };
 
     return (
-        <div className='slider-container'>
+        <div className={styles.sliderContainer}>
             <p>{props.data.title}</p>
             <Slider {...settings}>
                 { props.data.articles.map(article =>

@@ -2,13 +2,13 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom'
 
 import AirTickets from '../pages/Airtickets';
-import Articles from '../pages/Articles';
-import ArticleOne from '../pages/ArticleOne';
+import Articles from '../pages/Articles/Articles';
+import ArticleOne from '../pages/ArticleOne/ArticleOne';
 import Gallery from '../pages/Gallery';
-import Home from '../pages/Home';
+import Home from '../pages/Home/Home';
 import Tours from '../pages/Tours';
 
-import '../styles/index.css';
+import '../index.css';
 
 const Router = () => {
     return (

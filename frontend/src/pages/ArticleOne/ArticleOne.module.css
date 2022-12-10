@@ -4,21 +4,6 @@
     margin-right: auto;
 }
 
-.article-loading {
-    font-size: 20pt;
-    text-align: center;
-}
-
-.article h1 {
-    text-align: center;
-}
-
-.article-content {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 18pt;
-}
-
 .article img {
     display: block;
     width: 100%;
@@ -27,7 +12,22 @@
     margin: auto;
 }
 
-.article-published {
+.article h1 {
+    text-align: center;
+}
+
+.articleLoading {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.articleContent {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18pt;
+}
+
+.articlePublished {
     display: block;
     width: 100%;
     margin: 0;

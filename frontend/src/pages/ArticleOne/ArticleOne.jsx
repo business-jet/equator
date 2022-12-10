@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
-import PostService from "../api/PostService";
-import { updateArticleByID } from "../store/articlesSlice";
+import PostService from "../../api/PostService";
+import { updateArticleByID } from "../../store/articlesSlice";
 import MarkdownView from 'react-showdown';
-import '../styles/article.css';
+import styles from './ArticleOne.module.css';
 
 const ArticleOne = () => {
     const dispatch = useDispatch()
@@ -31,20 +31,20 @@ const ArticleOne = () => {
     }
 
     return (
-        <div className="article">
+        <div className={styles.article}>
             {article === null
                 ?
-                <div className="article-loading">
+                <div className={styles.articleLoading}>
                     Загрузка...
                 </div>
                 :
-                <div className="article-content">
-                    <h1 className="article-title">{article.title}</h1>
+                <div className={styles.articleContent}>
+                    <h1 className={styles.articleTitle}>{article.title}</h1>
                     { article.picture_url.trim() !== '' && 
-                        <img src={article.picture_url} alt='' className="article-main-img"/>
+                        <img src={article.picture_url} alt='' />
                     }
                     <MarkdownView markdown={article.text} options={{}} />
-                    <div className="article-published">Опубликовано: {parseDate(article.date)}</div>
+                    <div className={styles.articlePublished}>Опубликовано: {parseDate(article.date)}</div>
                 </div>
             }
         </div>
