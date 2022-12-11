@@ -1,6 +1,5 @@
 .articles {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 10%;
 }
 
 .articles:after {
@@ -11,5 +10,15 @@
 
 .articlesColumn {
     float: left;
-    width: 33.3%;
+    width: 33.333%;
+}
+@media (max-width:1500px) {
+    .articlesColumn {
+        width: 50%;
+    }
+}
+@media (max-width:1000px) {
+    .articlesColumn {
+        width: 100%;
+    }
 }

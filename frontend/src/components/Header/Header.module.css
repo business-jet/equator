@@ -3,18 +3,14 @@
 
     margin-bottom: 20px;
     padding: 0px;
-    height: 75%;
+    height: 75vh;
     width: 100%;
+    overflow: hidden;
 
     /* background: rgb(34, 34, 34); */
     background: url('https://sun9-20.userapi.com/impg/7L8A7agYJ7tFghAmOKuZdlfwkb4uFyBp0Qot-Q/ibhhpmm9XHc.jpg?size=1620x1080&quality=95&sign=949fbf14ce3736cd8f2bea2c071c7ac5&type=album');
     background-repeat: no-repeat;
     background-size: cover;
-}
-@media (max-width:1200px) {
-    .header {
-        overflow: scroll;
-    }
 }
 
 .links {

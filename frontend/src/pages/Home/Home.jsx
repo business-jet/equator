@@ -10,11 +10,11 @@ const Home = () => {
         <div className={styles.home}>
             <ArticleCarousel data = {{
                 title: 'Лучшие сатьи по версии NEW York Times:',
-                articles: carousel_articles
+                articles: carousel_articles,
             }}/>
             <ArticleCarousel data = {{
                 title: 'Лучшее по версии Equator:',
-                articles: carousel_articles.filter(article => article.score > 0)
+                articles: carousel_articles.filter(article => article.score > 0),
             }}/>
         </div>
     )

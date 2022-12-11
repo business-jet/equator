@@ -1,12 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const articlesSlice = createSlice({
     name: 'articles',
 
     initialState: {
         articles: [],
-        articleByID: null
+        articleByID: null,
+        carouselSettings: {
+            infinite: true,
+            speed: 1000,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            swipeToSlide: true
+        }
     },
     
     reducers: {
@@ -15,9 +24,12 @@ const articlesSlice = createSlice({
         },
         updateArticleByID(state, action) {
             state.articleByID = action.payload
+        },
+        updateCarouselSettings(state, action) {
+            state.carouselSettings.slidesToShow = action.payload.slidesToShow
         }
     }
 })
 
 export default articlesSlice.reducer
-export const { updateAll, updateArticleByID } = articlesSlice.actions
+export const { updateAll, updateArticleByID, updateCarouselSettings } = articlesSlice.actions

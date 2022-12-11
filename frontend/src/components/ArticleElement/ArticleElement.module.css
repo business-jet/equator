@@ -1,25 +1,7 @@
-.articles {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.articles:after {
-    content: '';
-    /* display: table; */
-    clear: both;
-}
-
-.articlesColumn {
-    float: left;
-    width: 33.3%;
-}
-
 .articleContainer {
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 0 20px;
+    margin: 20px 0;
 }
 
 .articleImg {
