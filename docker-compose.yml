@@ -1,0 +1,38 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: equator-db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: equator
+    volumes:
+      - db:/var/lib/postgresql/data
+  
+  backend:
+    container_name: equator-backend
+    build: ./backend
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/backend
+    depends_on:
+      - db
+
+  frontend:
+    container_name: equator-frontend
+    build: ./frontend
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/frontend
+
+volumes:
+  db:

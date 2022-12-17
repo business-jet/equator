@@ -8,8 +8,8 @@ export default class PostService {
             return response.data
         }
         catch (e) {
-            console.log('API getArticle ERROR:')
-            console.log(e)
+            console.log('API getArticles ERROR')
+            return []
         }
     }
 
@@ -20,7 +20,7 @@ export default class PostService {
         }
         catch (e) {
             console.log('API getArticle ERROR:')
-            console.log(e)
+            return null
         }
     }
 }
